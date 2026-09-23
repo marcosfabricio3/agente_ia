@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const href = el.getAttribute('href') || '';
-        const isSectionAnchor = href.startsWith('#') && href.length > 1;
-        if (isSectionAnchor) {
+        const isPlaceholder = href === '' || href === '#';
+        if (!isPlaceholder) {
             return;
         }
 
