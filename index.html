@@ -1,14 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Sonrisa Uruguaya — clínica dental en Montevideo. Limpieza, blanqueamiento, ortodoncia y atención de urgencias. Agenda tu cita y habla con nuestro asistente inteligente.">
+    <title>Sonrisa Uruguaya | Sonríe con confianza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=ambulance,auto_awesome,call,chat,cleaning_services,dentistry,emergency,location_on,mail,schedule,warning&display=block" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <div class="bg-decorations" aria-hidden="true">
+        <div class="blob blob--red"></div>
+        <div class="blob blob--blue"></div>
+        <div class="blob blob--light"></div>
+    </div>
+
+    <nav class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="#inicio" class="nav__brand">Sonrisa <span>Uruguaya</span></a>
+
+            <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav__menu" id="navMenu">
+                <a href="#inicio" class="nav__link">Inicio</a>
+                <a href="#servicios" class="nav__link">Servicios</a>
+                <a href="#horarios" class="nav__link">Horarios</a>
+                <a href="#urgencias" class="nav__link">Urgencias</a>
+                <a href="#contacto" class="nav__link">Contacto</a>
+                <a href="#" class="nav__cta btn btn--primary js-modal-trigger">Reservar cita</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero__content">
+                <span class="hero__badge">Clínica dental en Montevideo</span>
+                <h1 class="hero__title">Sonrisa <span>Uruguaya</span><br>Sonríe con <span class="accent-red">confianza</span></h1>
+                <p class="hero__subtitle">Cuidamos tu salud bucal con un trato cercano y profesional. Limpieza, ortodoncia, estética dental y urgencias cuando más lo necesitas.</p>
+                <div class="hero__ctas">
+                    <a href="#" class="btn btn--primary js-modal-trigger">Reservar cita</a>
+                    <a href="#" class="btn btn--ghost js-modal-trigger">Urgencias: llamar</a>
+                </div>
+            </div>
+
+            <div class="hero__cards">
+                <div class="glass info-card">
+                    <div class="info-card__icon"><span class="material-symbols-outlined" aria-hidden="true">schedule</span></div>
+                    <div class="info-card__label">Horario</div>
+                    <div class="info-card__value">Lun a Vie 9–18<br>Sáb 9–13</div>
+                </div>
+                <div class="glass info-card">
+                    <div class="info-card__icon"><span class="material-symbols-outlined" aria-hidden="true">location_on</span></div>
+                    <div class="info-card__label">Ubicación</div>
+                    <div class="info-card__value">Av. 18 de Julio 1234<br>Montevideo</div>
+                </div>
+                <div class="glass info-card info-card--urgent">
+                    <div class="info-card__icon"><span class="material-symbols-outlined" aria-hidden="true">emergency</span></div>
+                    <div class="info-card__label">Urgencias</div>
+                    <div class="info-card__value">Guardia 24 h<br>todos los días</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="servicios">
+            <h2 class="section__title">Nuestros <span>servicios</span></h2>
+            <p class="section__subtitle">Todo lo que tu sonrisa necesita, en un solo lugar.</p>
+
+            <div class="services__grid">
+                <article class="glass service-card service-card--blue">
+                    <div class="service-card__icon"><span class="material-symbols-outlined" aria-hidden="true">cleaning_services</span></div>
+                    <h3 class="service-card__title">Limpieza dental</h3>
+                    <p class="service-card__text">Eliminación de placa y sarro para mantener encías sanas y una boca limpia.</p>
+                </article>
+
+                <article class="glass service-card service-card--red">
+                    <div class="service-card__icon"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span></div>
+                    <h3 class="service-card__title">Blanqueamiento</h3>
+                    <p class="service-card__text">Recuperá el brillo de tu sonrisa con un blanqueamiento profesional y seguro.</p>
+                </article>
+
+                <article class="glass service-card service-card--blue">
+                    <div class="service-card__icon"><span class="material-symbols-outlined" aria-hidden="true">dentistry</span></div>
+                    <h3 class="service-card__title">Ortodoncia</h3>
+                    <p class="service-card__text">Alineá tus dientes con brackets o alineadores, adaptados a tu caso.</p>
+                </article>
+
+                <article class="glass service-card service-card--urgent">
+                    <div class="service-card__icon"><span class="material-symbols-outlined" aria-hidden="true">ambulance</span></div>
+                    <h3 class="service-card__title">Atención de urgencias</h3>
+                    <p class="service-card__text">Guardia todos los días, incluso fuera de horario. Llamá y te atendemos.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="schedule" id="horarios">
+            <h2 class="section__title">Horarios de <span>atención</span></h2>
+            <p class="section__subtitle">Atendemos de lunes a sábado con horarios pensados para vos.</p>
+
+            <div class="glass schedule__card">
+                <div class="schedule__row">
+                    <span class="schedule__day">Lunes a Viernes</span>
+                    <span class="schedule__time">9:00 – 18:00</span>
+                </div>
+                <div class="schedule__row">
+                    <span class="schedule__day">Sábados</span>
+                    <span class="schedule__time">9:00 – 13:00</span>
+                </div>
+                <div class="schedule__row">
+                    <span class="schedule__day">Domingos</span>
+                    <span class="schedule__time schedule__time--closed">Cerrado</span>
+                </div>
+            </div>
+
+            <p class="schedule__note">Fuera de horario, atendemos <a href="#urgencias">urgencias por línea de guardia</a>.</p>
+        </section>
+
+        <section class="urgent" id="urgencias">
+            <h2 class="section__title">Atención de <span>urgencias</span></h2>
+            <p class="section__subtitle">¿Dolor o emergencia? No esperes al lunes: te esperamos.</p>
+
+            <div class="urgent__card">
+                <div class="urgent__icon"><span class="material-symbols-outlined" aria-hidden="true">emergency</span></div>
+                <h3 class="urgent__title">Guardia todos los días</h3>
+                <p class="urgent__text">Atendemos urgencias todos los días de la semana, incluso fuera de horario y feriados. Llamá a nuestra línea de guardia y te orientamos al momento.</p>
+                <a href="#" class="btn btn--primary js-modal-trigger">Llamar a la guardia</a>
+            </div>
+
+            <div class="urgent__pediatric">
+                <div class="urgent__pediatric-icon"><span class="material-symbols-outlined" aria-hidden="true">warning</span></div>
+                <h3 class="urgent__pediatric-title">Atención: urgencias pediátricas</h3>
+                <p class="urgent__pediatric-text">No atendemos urgencias pediátricas (menores de 12 años). Estos casos se derivan al <strong>Hospital Pediátrico</strong> más cercano.</p>
+                <a href="#" class="btn btn--ghost js-modal-trigger">Ver hospital pediátrico</a>
+            </div>
+        </section>
+
+        <section class="contact" id="contacto">
+            <h2 class="section__title">Contacto</h2>
+            <p class="section__subtitle">Agendá tu cita o consultanos por cualquier duda.</p>
+
+            <div class="contact__grid">
+                <a href="#" class="glass contact-card">
+                    <div class="contact-card__icon"><span class="material-symbols-outlined" aria-hidden="true">call</span></div>
+                    <div class="contact-card__label">Teléfono</div>
+                    <div class="contact-card__value">+598 2912 3456</div>
+                </a>
+                <a href="#" class="glass contact-card">
+                    <div class="contact-card__icon"><span class="material-symbols-outlined" aria-hidden="true">chat</span></div>
+                    <div class="contact-card__label">WhatsApp</div>
+                    <div class="contact-card__value">+598 2912 3456</div>
+                </a>
+                <a href="#" class="glass contact-card">
+                    <div class="contact-card__icon"><span class="material-symbols-outlined" aria-hidden="true">location_on</span></div>
+                    <div class="contact-card__label">Dirección</div>
+                    <div class="contact-card__value">Av. 18 de Julio 1234<br>Montevideo</div>
+                </a>
+                <a href="#" class="glass contact-card">
+                    <div class="contact-card__icon"><span class="material-symbols-outlined" aria-hidden="true">mail</span></div>
+                    <div class="contact-card__label">Email</div>
+                    <div class="contact-card__value">info@sonrisauruguaya.uy</div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__brand">Sonrisa <span>Uruguaya</span></p>
+            <div class="footer__links">
+                <a href="#" class="footer__link">Términos y condiciones</a>
+                <a href="#" class="footer__link">Política de privacidad</a>
+            </div>
+            <p class="footer__copy">© 2026 Sonrisa Uruguaya. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal__close" id="modalClose" aria-label="Cerrar">✕</button>
+            <img class="modal__img" src="sad-dirty-tooth-character-with-cavities-dental-problem-cartoon-illustration-vector.jpg" alt="Diente triste con caries">
+            <h3 class="modal__title" id="modalTitle">Función en desarrollo</h3>
+            <p class="modal__text">Estamos trabajando en esta función.<br> ¡Volvé pronto!</p>
+            <button class="btn btn--primary modal__confirm" id="modalConfirm">Entendido</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
     <script>
-        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="8qEnGgQAk1h2Gx9jKxxnU";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="8qEnGgQAk1h2Gx9jKxxnU";script.domain="www.chatbase.co";document.body.appendChild(script)};onLoad()})();
     </script>
 </body>
 </html>
